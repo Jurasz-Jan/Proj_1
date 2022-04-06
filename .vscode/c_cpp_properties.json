@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64",
+            "compilerPath": "C:\\Users\\Członkowie GSA\\.vscode\\extensions\\ms-vscode.cpptools-1.9.7\\bin\\cpptools.exe"
+        }
+    ],
+    "version": 4
+}
