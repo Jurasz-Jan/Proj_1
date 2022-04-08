@@ -17,6 +17,10 @@ public:
 	    
 	    type="Pekomon";
 	}
+	~Pekomon()
+	{
+	    std::cout<< "A pekomon has fallen. A beautiful star faded away."<<std::endl;
+	}
 
 	
 	
@@ -27,6 +31,8 @@ class Carmander : public Pekomon
 {
 public:
 	std::string classy;
+	int age=3;
+	int provethathcopyconstructorworks;
 	
     Carmander(int element){
         switch(element){
@@ -35,6 +41,7 @@ public:
             break;
             case 1:
                 type="Car";
+                age=99;
             break;
             case 2:
                 type="HobByte";
@@ -59,19 +66,39 @@ public:
     // code block
         }
             }
+     //Copy constructor       
+   Carmander(const Carmander &Suzuki) 
+                        {int age=Suzuki.age; 
+                            std::string type=Suzuki.type;
+                        }
+                        
+                        
+                        
+    //
+    
+     int getage()            {  return age; }
 };
 
 // main function
 int main()
 {
 	Carmander Suzuki(1);
+	
+	Carmander Suzuki2=Suzuki;
 		
 	// An object of class child has all data members
 	// and member functions of class parent
 	
 	
 	std::cout << "Child id is: " << Suzuki.classy << '\n';
-	std::cout << "Parent id is: " << Suzuki.type << '\n';
+	std::cout << "Age of Suzuki is: " << Suzuki.getage() << '\n';
+	std::cout << "Age of Suzuki2 is " << Suzuki2.type <<  '\n';
+	
+	
+	
+	 Carmander *obj = new Carmander(1);
+
+	delete obj;
 		
 	return 0;
 }
