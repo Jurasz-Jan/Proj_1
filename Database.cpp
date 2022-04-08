@@ -7,8 +7,9 @@
 // Base class
 class Pekomon
 {
-    
-    
+private:
+    int blackmarketvalue=0;   
+
 public:
 	std::string type;
 	Pekomon()
@@ -22,9 +23,11 @@ public:
 	    std::cout<< "A pekomon has fallen. A beautiful star faded away."<<std::endl;
 	}
 
-	
+void Up(int money)
+    {blackmarketvalue+=money;}	
 	
 };
+int Cost(){return blackmarketvalue;}
 
 // Sub class inheriting from Base Class(Parent)
 class Carmander : public Pekomon
@@ -89,10 +92,10 @@ int main()
 	// An object of class child has all data members
 	// and member functions of class parent
 	
-	
+	Suzuki.Up();
 	std::cout << "Child id is: " << Suzuki.classy << '\n';
-	std::cout << "Age of Suzuki is: " << Suzuki.getage() << '\n';
-	std::cout << "Age of Suzuki2 is " << Suzuki2.type <<  '\n';
+	std::cout << "Black market value of Suzuki is" << Suzuki.blackmarketvalue()) << '\n';
+	std::cout << "Black market value of Suzuki2 is" << Suzuki2.type <<  '\n';
 	
 	
 	
